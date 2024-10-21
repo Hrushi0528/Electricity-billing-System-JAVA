@@ -1,0 +1,74 @@
+--
+-- Database: `electricitybilling28`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carddetails28`
+--
+
+CREATE TABLE `carddetails28` (
+  `Accountholdername` varchar(50) NOT NULL,
+  `cardno` varchar(14) NOT NULL,
+  `pin` varchar(4) NOT NULL,
+  `bankname` varchar(30) NOT NULL,
+  `cvv` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+--
+-- Table structure for table `customerdetails28`
+--
+
+CREATE TABLE `customerdetails28` (
+  `Customername` varchar(30) NOT NULL,
+  `meterno` varchar(30) NOT NULL,
+  `Address` varchar(100) NOT NULL,
+  `City` varchar(30) NOT NULL,
+  `State` varchar(15) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `phno` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+--
+-- Table structure for table `login28`
+--
+
+CREATE TABLE `login28` (
+  `username` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `meterno` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+--
+-- Table structure for table `paymenthistory28`
+--
+
+CREATE TABLE `paymenthistory28` (
+  `Customername` varchar(30) NOT NULL,
+  `meterno` varchar(10) NOT NULL,
+  `cardno` varchar(16) NOT NULL,
+  `Amount` varchar(10) NOT NULL,
+  `date` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+--
+-- Table structure for table `unitshistory28`
+--
+
+CREATE TABLE `unitshistory28` (
+  `name` varchar(30) NOT NULL,
+  `meterno` varchar(10) NOT NULL,
+  `month` varchar(20) NOT NULL,
+  `year` varchar(20) NOT NULL,
+  `units` varchar(10) NOT NULL,
+  `totalcost` varchar(10) NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
